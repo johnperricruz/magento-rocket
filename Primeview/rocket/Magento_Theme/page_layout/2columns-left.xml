@@ -1,0 +1,26 @@
+<layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_layout.xsd">
+    <update handle="1column"/>
+    <referenceContainer name="page.wrapper">
+		<!--Header-->
+		<block class="Magento\Framework\View\Element\Template" name="rocket.header" template="Magento_Theme::static/header.phtml" before="main.container.fluid"/>
+		<!--./Header-->
+		
+		<!--Content-->
+		<container before="rocket.footer" name="main.container.wrapper" htmlTag="div" htmlClass="container wrapper">
+			<container name="main.container.row" htmlTag="div" htmlClass="row">
+				<container name="main.container.colsb" htmlTag="div" htmlClass="col-md-3">
+					<container name="sidebar.main" as="sidebar_main" label="Sidebar Main"/>
+					<container name="sidebar.additional" as="sidebar_additional" label="Sidebar Additional"/>
+				</container>
+				<container name="main.container.colmain" htmlTag="div" htmlClass="col-md-9">
+					<container name="main" htmlTag="div" htmlClass="main-content"/>
+				</container>
+			</container>
+		</container>
+		<!--./Content-->
+		
+		<!--Footer-->
+		<block class="Magento\Framework\View\Element\Template" name="rocket.footer" template="Magento_Theme::static/footer.phtml" after="main"/>
+		<!--./Footer-->
+	</referenceContainer>
+</layout>

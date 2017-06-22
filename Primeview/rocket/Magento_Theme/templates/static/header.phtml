@@ -1,0 +1,65 @@
+<?php
+	/**
+	 * Class instantiation
+	 */
+	define('THEME_DIR',getcwd().'/app/design/frontend/Primeview/rocket');
+	require_once(THEME_DIR.'/helper/Rocket.php');
+	$rocket = new Rocket();
+?>
+<div class="topmost">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 text-left">
+				</p>Welcome to Rocket Framework Mage 2.0 Version</p>
+			</div>
+			<div class="col-md-6 text-right">
+				<ul class="store-links">
+					<li><a href="
+					<?php 
+						if($rocket->isLoggedIn()) {
+							echo $rocket->getAccountUrl('logout'); 
+						} else{ 
+							echo $rocket->getAccountUrl('login'); 
+						} 
+					?>
+					">
+					<?php 
+						if($rocket->isLoggedIn()){
+							echo 'Logout';
+						}
+						else{
+							echo 'Login'; 
+						}
+					?>
+					</a></li>
+					<li><a href="<?php echo $rocket->getCartUrl(); ?>">Cart</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="mobile-only mobile-menu container-fluid">
+	<div class="row">
+		<div class="col-xs-6 text-left">
+			<a href="/">Rocket</a>
+		</div>
+		<div class="col-xs-6 text-right">
+			<a id="mobile-menu-trigger" href="#menu">Menu</a>
+		</div>
+	</div>
+</div>
+<div class="navigation-wrapper desktop-only">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2 text-left logo-wrap">
+				<?php echo $rocket->getLogo($this); ?>
+			</div>
+			<div class="col-md-7 text-right nav">
+				<?php echo $rocket->getNavigationMenu($this); ?>
+			</div>
+			<div class="col-md-3 text-right">
+				<?php echo $rocket->getSearchForm($this); ?>
+			</div>
+		</div>
+	</div>
+</div>

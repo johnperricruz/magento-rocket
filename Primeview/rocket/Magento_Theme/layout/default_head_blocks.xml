@@ -1,0 +1,25 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<head>
+		<!--Remove Styles-->
+		<remove src="css/styles-m.css" />
+		<remove src="css/styles-l.css" />
+		<remove src="css/print.css" />
+		  
+		<!--Custom Styles-->
+		<css src="css/bootstrap.min.css" order = "1" />
+		<css src="css/base.css" order = "2" />
+		<css src="css/overlap.css" order = "2" />
+		<css src="css/responsive.css" order = "2" />
+		
+		<css src="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"  src_type="url" />
+		<css src="//cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/5.7.8/css/jquery.mmenu.all.css"  src_type="url" />
+		
+		
+		<!--Before-After Script-->
+		<link src="js/jquery.min.js" order = "1" />
+		<script  src="//cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/5.7.8/js/jquery.mmenu.all.min.js" order = "1"  src_type="url"  />
+		<link src="js/bootstrap.min.js" order = "2"  />
+		<link src="js/script.js" order = "2" />
+		
+	</head>
+</page>  
