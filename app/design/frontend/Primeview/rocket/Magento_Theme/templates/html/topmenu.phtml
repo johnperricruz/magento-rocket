@@ -1,0 +1,38 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php
+/**
+ * Top menu for store
+ *
+ * @var $block \Magento\Theme\Block\Html\Topmenu
+ */
+?>
+<?php $columnsLimit = $block->getColumnsLimit() ?: 0; ?>
+<?php $_menu = $block->getHtml('level-top', 'submenu', $columnsLimit) ?>
+
+<nav class="navbar navbar-default">
+   <div class="container-fluid">
+      <div id="navbar" class="navbar-collapse collapse">
+         <ul class="nav navbar-nav">
+			<?php echo $_menu; ?>
+         </ul>
+      </div>
+      <!--/.nav-collapse -->
+   </div>
+   <!--/.container-fluid -->
+</nav>
+<script type="text/javascript">
+	$j = jQuery.noConflict();
+	$j(function(e){
+		$j("#navbar").find('ul li.parent').addClass('dropdown');
+		$j("#navbar").find('ul li.parent ul.submenu').addClass('dropdown-menu');
+		$j("#navbar").find('ul li.parent ul.submenu li.dropdown').addClass('dropdown-submenu');
+	});
+</script>

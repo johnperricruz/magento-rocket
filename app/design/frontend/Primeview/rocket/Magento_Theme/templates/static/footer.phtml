@@ -1,0 +1,93 @@
+<?php 
+	/**
+	 * @instantiate Helper Class
+	 */
+	$rocket = $this->helper('Primeview\Rocket\Helper\Data'); 
+?>
+<footer class="footer">
+	<div class="top">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<h3>Company</h3>
+					<ul>
+						<li><a href="/about-cocoons/">About Cocoons Fitovers</a></li>
+						<li><a href="/newsletter/">News & Information</a></li>
+						<li><a href="/terms-and-conditions/">Consumer Terms and Conditions</a></li>
+						<li><a href="/cocoons-community/">Cocoons Community</a></li>
+						<li><a href="http://www.liveeyewear.com">Brands</a></li>
+						<li><a href="/privacy-policy/">Privacy Policy</a></li>
+						<li><a href="/legal/">Legal</a></li>
+						<li><a href="/contact-us/">Contact Us</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<h3>Support</h3>
+					<ul>
+						<li><a href="/faq/">Cocoons Fitovers – FAQ</a></li>
+						<li><a href="/terms-and-conditions/">Product Returns</a></li>
+						<li><a href="/size-finder/">Size Finder</a></li>
+						<li><a href="/warranty/">Warranty Information and Registration</a></li>
+						<li><a href="/california-prop-65-warning/">California Residents: Prop 65</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<h3>Industry</h3>
+					<ul>
+						<li><a href="/cocoons-frame-technology/">Cocoons Frame Technology</a></li>
+						<li><a href="/lenses/">Polaré Lenses</a></li>
+						<li><a href="/cocoons/are-cocoons-tough-enough/">Tough Enough?</a></li>
+						<li><a href="http://liveeyewear.com/dealers/">Dealer Login</a></li>
+						<li><a href="/shop/uncategorized/dealer-payment/">Dealer Payment</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<?php echo $rocket->getLogo($this); ?>
+					<h4>1-800-834-2563</h4>
+					<ul class="social">
+						<li><a target="_blank" href="http://facebook.com/liveeyewear"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						<li><a target="_blank" href="http://twitter.com/cocoonseyewear"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						<li><a target="_blank" href="https://www.youtube.com/user/CocoonsEyewear"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+						<li><a target="_blank" href="https://www.instagram.com/cocoonseyewear/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div> 
+	<div class="bot">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<img src="/skin/img/live-eyewear.png" draggable="false" alt="" title="" />
+				</div>
+				<div class="col-md-4">
+					<img src="/skin/img/cocoons-k.png" draggable="false" alt="" title="" />
+				</div>
+				<div class="col-md-4">
+					<p>&copy; Copyright <?php echo date('Y'); ?> Live Eyewear. All rights reserved</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer> 
+<!--Formilla Chat-->
+<script type="text/javascript">   
+   (function(){
+       var head = document.getElementsByTagName("head").item(0);
+       var script = document.createElement('script');
+       var src = (document.location.protocol == "https:" ? 'https://www.formilla.com/scripts/feedback.js' : 'http://www.formilla.com/scripts/feedback.js');
+       script.setAttribute("type", "text/javascript");
+       script.setAttribute("src", src);
+       script.setAttribute("async", true);
+       var complete = false;
+       script.onload = script.onreadystatechange = function() {
+           if (!complete && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) {
+               complete = true;
+               Formilla.guid = '81d95e73-7ee7-4d94-8d09-6869634befd8';
+               Formilla.loadFormillaChatButton();
+           }
+       };
+       head.appendChild(script);
+   })();
+</script>
+<!--./Formilla Chat-->

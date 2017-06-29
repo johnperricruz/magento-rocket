@@ -1,0 +1,21 @@
+**SSH**
+1. php bin/magento module:status
+
+2. If you follow above step, you will see this in the result:
+	List of disabled modules:
+	Primeview_Rocket
+	
+3. php bin/magento module:enable Primeview_Rocket
+
+4. The module has enabled successfully if you saw this result:
+	The following modules has been enabled:
+	- Mageplaza_HelloWorld
+	
+5. php bin/magento setup:upgrade
+
+
+**PHTML**
+<?php $rocket = $this->helper('Primeview\Rocket\Helper\Data'); ?>
+//$rocket->debug(); 
+
+on edits, repeat #5.

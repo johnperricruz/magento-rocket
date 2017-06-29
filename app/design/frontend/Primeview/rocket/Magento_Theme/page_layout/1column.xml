@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_layout.xsd">
+	<update handle="1column"/>
+    <referenceContainer name="page.wrapper">
+		<!--Header-->
+		<block class="Magento\Framework\View\Element\Template" name="rocket.header" template="Magento_Theme::static/header.phtml" before="main.container.fluid"/>
+		<!--./Header-->
+		
+		<!--Content-->
+		<container name="main.container.wrapper" htmlTag="div" htmlClass="container">
+			<container name="main.container.row" htmlTag="div" htmlClass="row">
+				<container name="main.container.col" htmlTag="div" htmlClass="col-md-12">
+					<container name="main" htmlTag="div" htmlClass="main-content"/>
+				</container>
+			</container>
+		</container>
+		<!--./Content-->
+		
+		<!--Footer-->
+		<block class="Magento\Framework\View\Element\Template" name="rocket.footer" template="Magento_Theme::static/footer.phtml" after="main"/>
+		<!--./Footer-->
+	</referenceContainer>
+</layout> 

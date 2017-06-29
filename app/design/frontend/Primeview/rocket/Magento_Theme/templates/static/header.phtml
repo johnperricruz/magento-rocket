@@ -1,0 +1,27 @@
+<?php 
+	/**
+	 * @instantiate Helper Class
+	 */
+	$rocket = $this->helper('Primeview\Rocket\Helper\Data'); 
+?>
+<div id="fakeloader"></div>
+<div class="navigation-wrapper">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2 text-left logo-wrap">
+				<?php echo $rocket->getLogo($this); ?>
+			</div>
+			<div class="col-md-8 text-right nav desktop-only">
+				<?php echo $rocket->getNavigationMenu($this); ?>
+			</div>
+			<div class="col-md-2 text-right">
+				<ul class="social">
+					<li class="search"><?php echo $rocket->getSearchForm($this); ?></li>
+					<li><a target="_blank" href="http://facebook.com/liveeyewear"><i aria-hidden="true" class="fa fa-facebook"></i></a></li>
+					<li><a target="_blank" href="http://twitter.com/cocoonseyewear"><i aria-hidden="true" class="fa fa-twitter"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+ 

@@ -1,0 +1,118 @@
+/************************************+
+DESCRIPTION  : RESPONSIVITY SCRIPT   *
+AUTHOR       : JOHN PERRI CRUZ       *
+DESCRIPTION  : RESPONSIVE VIEWSPORTS *
+DATE CREATED : JULY 17, 2015         *
+*************************************/
+/*GLOBAL*/
+.desktop-only{
+	display:block;
+}
+.mobile-only{
+	display:none;
+}
+.mobile_links{
+	pointer-events: none;
+}       
+@media screen and (max-width: 1920px){ /*********| 1080P |**********/    
+}                
+@media screen and (max-width: 1680px){ /*********| BB Desktop |**********/    
+}              
+@media screen and (max-width: 1366px){ /********| HD LAPTOP |*******/
+}
+@media screen and (max-width: 1280px){ /**********| 720P |**********/
+}
+@media screen and (max-width: 1152px){ /*********| Alfie Desktop |**********/    
+	section.section.professional-grade {
+		background-size: 47%;
+		padding: 30px;
+	}
+	section.section.lens-centerpiece {
+		padding: 20px 0px;
+	}
+	.navigation-wrapper ul.nav.navbar-nav li a {
+		font-size: 15px;
+	}
+	.navigation-wrapper ul.nav.navbar-nav li a {
+		font-size: 15px;
+		padding: 15px 9px;
+	}
+	section.section.finest-fitovers {
+		padding: 30px 0px;
+	}
+} 
+@media screen and (max-width: 1024px){ /**| APPLE IPAD LANDSCAPE |**/
+
+}
+@media screen and (max-width: 800px) { /**| APPLE IPAD PORTRAIT |***/
+	.desktop-only{
+		display:none;
+	}
+	.mobile-only{
+		display:block;
+	}
+	.navigation-wrapper .col-md-2.text-left.logo-wrap img {
+		margin: auto;
+	}	
+	.container {
+		max-width: 100%!important;
+	}
+	.navigation-wrapper ul.social {
+		margin: 0px;
+		text-align: center;
+	}
+	section.section.professional-grade {
+		background: none;
+		padding: 20px 0px;
+	}
+	section.section.lens-centerpiece {
+		padding: 20px 0px;
+	}
+	section.section.award-winning {
+		padding: 20px 0px;
+	} 
+	section.section.finest-fitovers {
+		background: url(/skin/img/finest-fitover.jpg);
+		background-position: center center;
+		padding: 0px;
+	}
+	.cta-container {
+		padding: 20px 0px;
+	}
+	.bot p {
+		text-align: center;
+		margin: 10px 0px;
+	}
+	.block-search input {
+		left: 0px;
+		margin: 15px 0;
+		margin: auto;
+	}
+	.block.block-search {
+		max-width: 90%;
+	}	
+	.block-search .control {
+		border-top: 0px;
+	}
+	.block-search .label {
+		top: 50px;
+		position: relative;
+		z-index: 9;
+	}
+}
+@media screen and (max-width: 640px) { /*|SAMSUNG MOBILE LANDSCAPE|*/
+
+}
+@media screen and (max-width: 480px) { /*| GENERIC ANDROID PHONES |*/
+
+}
+@media screen and (max-width: 414px) { /********| IPHONE 6+ |*******/
+
+}
+@media screen and (max-width: 375px) { /********| IPHONE 6 |********/
+
+}
+@media screen and (max-width: 360px) { /*|SAMSUNG MOBILE PORTRAIT|**/
+}
+@media screen and (max-width: 320px) { /******| IPHONE 5,4... |*****/
+}
