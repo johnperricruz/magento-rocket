@@ -33,8 +33,7 @@ class Data extends AbstractHelper{
 		 return $link;
 	}
 	public function isLoggedIn(){
-		$rocket = $this->rocket;
-		return $rocket['session']->isLoggedIn();
+
 	}
 	
 	/**
@@ -56,5 +55,7 @@ class Data extends AbstractHelper{
 	public function getSearchForm($_this){
 		return $_this->getLayout()->createBlock("Magento\Theme\Block\Html\Header\Logo")->setTemplate("Magento_Search::form.mini.phtml")->toHtml();
 	}	
-	
+	public function getMobileMenu($_this){
+		return $_this->getLayout()->createBlock("Magento\Theme\Block\Html\Topmenu")->setTemplate("Magento_Theme::html/mobilemenu.phtml")->toHtml();
+	}
 }
