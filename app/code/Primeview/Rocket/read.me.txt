@@ -19,3 +19,9 @@
 //$rocket->debug(); 
 
 on edits, repeat #5.
+
+
+**Clear Cache**
+php bin/magento setup:static-content:deploy --theme Primeview/rocket --theme Magento/backend
+
+rm -rf pub/static/frontend/PrimeView/rocket/en_US var/cache var/view_preprocessed
