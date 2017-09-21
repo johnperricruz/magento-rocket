@@ -1,0 +1,6 @@
+#!/bin/sh
+php bin/magento cache:clean
+php bin/magento indexer:reindex
+rm -rf pub/static/frontend/PrimeView/rocket/en_US var/cache var/view_preprocessed
+php bin/magento setup:static-content:deploy --theme Primeview/rocket --theme Magento/backend
+
