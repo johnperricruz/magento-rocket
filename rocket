@@ -1,0 +1,89 @@
+#!/bin/sh
+
+
+function rocket_main(){
+echo "
+---------------------------------------
+Welcome to Magento 2 Rocket Console. 	 
+	  
+Choose your action. 	
+
+[c] = Clear All Cache / Reindex Data.
+[r] = Regenerate Static Assets.
+[d] = Enter Development Mode.          
+[p] = Enter Production Mode.  
+[u] = Setup Upgrade.         
+[x] = Exit. 
+---------------------------------------
+
+";
+	read choice
+
+		case "$choice" in
+
+		("c")	rocket_loading
+				rocket_clearc
+				;;
+				
+		("r")	rocket_loading
+				rocket_regenerate
+				;;
+				
+		("d")	rocket_loading
+				rocket_developer
+				;;
+				
+		("p")	rocket_loading
+				rocket_clearc
+				rocket_production
+				;;
+				
+		("u")	rocket_loading
+				rocket_upgrade
+				;;		
+				
+		("x")	exit 1
+				;;					
+		(*) 
+				echo 
+				invalid option
+				;;		
+			
+		esac
+
+		rocket_main
+
+}
+function rocket_developer {
+	php bin/magento cache:disable
+	php bin/magento deploy:mode:set developer
+}
+function rocket_production {
+	php bin/magento cache:enable
+	php bin/magento deploy:mode:set production
+}
+function rocket_loading {
+	echo "Processing request...."
+}
+function rocket_clearc {
+	rm -rf pub/static/frontend/PrimeView/rocket/en_US/* var/cache var/composer_home var/generation var/page_cache var/view_preprocessed 
+	php bin/magento cache:clean
+	php bin/magento indexer:reindex
+	php bin/magento setup:static-content:deploy --theme Primeview/rocket --theme Magento/backend
+}
+function rocket_upgrade {
+	php bin/magento setup:upgrade
+}
+function rocket_regenerate(){
+	rm -rf pub/static/frontend/Primeview/rocket/en_US/*
+	php bin/magento setup:static-content:deploy --theme Primeview/rocket --theme Magento/backend
+}
+  
+
+
+rocket_main
+
+
+
+ 
+
