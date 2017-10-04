@@ -46,7 +46,7 @@ Choose your action.
 				;;					
 		(*) 
 				echo 
-				invalid option
+				invalid_option
 				;;		
 			
 		esac
@@ -78,7 +78,9 @@ function rocket_regenerate(){
 	rm -rf pub/static/frontend/Primeview/rocket/en_US/*
 	php bin/magento setup:static-content:deploy --theme Primeview/rocket --theme Magento/backend
 }
-  
+ function invalid_option(){
+	echo "Invalid Option, Each letter from the menu [c],[r],[d],[p],[u],[x] corresponds to a specific action."
+ }
 
 
 rocket_main
